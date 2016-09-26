@@ -1,25 +1,246 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartScreenViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="raH-Pe-lJo">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTf-a3-Ugo">
+                                        <rect key="frame" x="58" y="359" width="317" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Start Game">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="HEP-Ie-orW" kind="presentation" id="HSu-go-Cze"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="789" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKh-t4-8Au">
+                                        <rect key="frame" x="372" y="155" width="280" height="458"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="333" y="-116"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="RzC-pa-afT">
+            <objects>
+                <viewController id="HEP-Ie-orW" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5WX-6b-VB3"/>
+                        <viewControllerLayoutGuide type="bottom" id="px6-DT-jwJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YoK-no-U3A">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdn-10-Ecg">
+                                <rect key="frame" x="399" y="368" width="227" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="GameView Segue Connection">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEu-1z-8nq">
+                                <rect key="frame" x="305" y="419" width="415" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="BackToStart Segue Connection">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="BackToStart" id="sVD-dK-Bda"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2016-09-23 at 18.05.35.png" translatesAutoresizingMaskIntoConstraints="NO" id="sT3-8D-b8L">
+                                <rect key="frame" x="570" y="516" width="256" height="183"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2016-09-23 at 18.07.26.png" translatesAutoresizingMaskIntoConstraints="NO" id="fjV-6I-Pwf">
+                                <rect key="frame" x="212" y="516" width="350" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="1gi-3Y-pTw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEN-BX-f5p">
+                                <rect key="frame" x="304" y="475" width="416" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Add To HighScore segue connection: &quot;AddHighScore&quot; ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5bE-sR-xub" kind="presentation" identifier="AddHighScore" id="9lq-4o-EaU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqz-kj-Ss8">
+                                <rect key="frame" x="372" y="268" width="281" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="ViewLeaderBoard Segue Connection">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="yGu-5D-UkE" kind="presentation" identifier="ViewLeaderBoard" id="0tO-kd-Cpx"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-RT-38L">
+                                <rect key="frame" x="392" y="81" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.15400566189802856" blue="0.97318959184089016" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="IPs-Th-6w5"/>
+                                    <constraint firstAttribute="width" constant="240" id="VYz-Bw-EOQ"/>
+                                </constraints>
+                                <string key="text">None of these connections will show visually, GameScene : SKSene is loaded into this window and can acces these segue connections</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jdn-10-Ecg" firstAttribute="centerY" secondItem="YoK-no-U3A" secondAttribute="centerY" id="5cf-at-22x"/>
+                            <constraint firstItem="px6-DT-jwJ" firstAttribute="top" secondItem="fjV-6I-Pwf" secondAttribute="bottom" constant="69" id="87k-ga-utn"/>
+                            <constraint firstItem="Jdn-10-Ecg" firstAttribute="centerX" secondItem="YoK-no-U3A" secondAttribute="centerX" id="9aH-fa-VvX"/>
+                            <constraint firstItem="Jdn-10-Ecg" firstAttribute="centerX" secondItem="YoK-no-U3A" secondAttribute="centerX" id="Bmf-Jj-YDv"/>
+                            <constraint firstItem="kqz-kj-Ss8" firstAttribute="top" secondItem="3eb-RT-38L" secondAttribute="bottom" constant="59" id="GO9-je-I28"/>
+                            <constraint firstItem="MEN-BX-f5p" firstAttribute="top" secondItem="fEu-1z-8nq" secondAttribute="bottom" constant="23" id="GU4-CC-U8p"/>
+                            <constraint firstItem="3eb-RT-38L" firstAttribute="centerX" secondItem="YoK-no-U3A" secondAttribute="centerX" id="GuW-ys-bAy"/>
+                            <constraint firstItem="fEu-1z-8nq" firstAttribute="centerX" secondItem="Jdn-10-Ecg" secondAttribute="centerX" id="HSB-Jv-I1J"/>
+                            <constraint firstItem="fjV-6I-Pwf" firstAttribute="top" secondItem="MEN-BX-f5p" secondAttribute="bottom" constant="8" symbolic="YES" id="LQ9-du-HQK"/>
+                            <constraint firstItem="sT3-8D-b8L" firstAttribute="top" secondItem="MEN-BX-f5p" secondAttribute="bottom" constant="8" symbolic="YES" id="NXi-bl-Rwr"/>
+                            <constraint firstItem="kqz-kj-Ss8" firstAttribute="centerX" secondItem="Jdn-10-Ecg" secondAttribute="centerX" id="Rnz-Xl-ItU"/>
+                            <constraint firstItem="sT3-8D-b8L" firstAttribute="leading" secondItem="fjV-6I-Pwf" secondAttribute="trailing" constant="8" symbolic="YES" id="Shy-JU-oAt"/>
+                            <constraint firstItem="Jdn-10-Ecg" firstAttribute="centerY" secondItem="YoK-no-U3A" secondAttribute="centerY" id="ang-71-DRi"/>
+                            <constraint firstItem="fEu-1z-8nq" firstAttribute="top" secondItem="Jdn-10-Ecg" secondAttribute="bottom" constant="18" id="cPh-ol-rq1"/>
+                            <constraint firstItem="fjV-6I-Pwf" firstAttribute="leading" secondItem="YoK-no-U3A" secondAttribute="leading" constant="212" id="cpT-y3-vAj"/>
+                            <constraint firstItem="fjV-6I-Pwf" firstAttribute="bottom" secondItem="sT3-8D-b8L" secondAttribute="bottom" id="gVx-Kj-rBR"/>
+                            <constraint firstItem="3eb-RT-38L" firstAttribute="top" secondItem="5WX-6b-VB3" secondAttribute="bottom" constant="81" id="lWo-Nf-86N"/>
+                            <constraint firstItem="MEN-BX-f5p" firstAttribute="trailing" secondItem="fEu-1z-8nq" secondAttribute="trailing" id="s6a-qt-d1x"/>
+                            <constraint firstItem="kqz-kj-Ss8" firstAttribute="centerX" secondItem="MEN-BX-f5p" secondAttribute="centerX" id="zxp-K3-60c"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SkG-zu-EU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1464" y="-116"/>
+        </scene>
+        <!--View Leader Board View Controller-->
+        <scene sceneID="Dvb-Fm-sws">
+            <objects>
+                <viewController id="yGu-5D-UkE" customClass="ViewLeaderBoardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cud-H8-Fv0"/>
+                        <viewControllerLayoutGuide type="bottom" id="dUA-vK-yPu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FlD-4e-frY">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMJ-R8-V9H">
+                                <rect key="frame" x="496" y="387" width="112" height="37"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="High Scores">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionShowHighScores:" destination="yGu-5D-UkE" eventType="touchUpInside" id="iDH-XV-7Ig"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwq-PM-SJz">
+                                <rect key="frame" x="489" y="432" width="126" height="37"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Achievements">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionShowAchievements:" destination="yGu-5D-UkE" eventType="touchUpInside" id="g6A-IS-o9S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9V7-cT-6qf">
+                                <rect key="frame" x="487" y="342" width="144" height="37"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="GameCenter sign in">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionShowHighScores:" destination="yGu-5D-UkE" eventType="touchUpInside" id="Efp-eM-T49"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ziH-b4-cJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2923" y="-304"/>
+        </scene>
+        <!--Add Highscore View Controller-->
+        <scene sceneID="eOI-b5-HgA">
+            <objects>
+                <viewController id="5bE-sR-xub" customClass="AddHighscoreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="upT-21-XBD"/>
+                        <viewControllerLayoutGuide type="bottom" id="zNb-uO-vKG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CS9-C4-kB1">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AddHighscoreViewController:Add my high-score" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KGz-CA-RCO">
+                                <rect key="frame" x="346" y="369" width="334" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3S3-hN-5sW">
+                                <rect key="frame" x="107" y="102" width="182" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KGz-CA-RCO" firstAttribute="centerX" secondItem="CS9-C4-kB1" secondAttribute="centerX" id="FFa-h8-Mr1"/>
+                            <constraint firstItem="KGz-CA-RCO" firstAttribute="centerY" secondItem="CS9-C4-kB1" secondAttribute="centerY" id="rJ1-XO-QuO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nki-3m-pq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2929" y="683"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Screen Shot 2016-09-23 at 18.05.35.png" width="256" height="212"/>
+        <image name="Screen Shot 2016-09-23 at 18.07.26.png" width="305" height="129"/>
+    </resources>
 </document>

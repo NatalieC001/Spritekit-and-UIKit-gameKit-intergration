@@ -13,5 +13,9 @@
 @property (strong, nonatomic) UIWindow *window;
 
 
+//make app id (com.KeyboardTest.Spritekit-and-UIKit)
+//Spritekit and UIViewControllers with leaderboard
+
+
 @end
 

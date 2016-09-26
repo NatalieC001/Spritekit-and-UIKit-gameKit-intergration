@@ -7,25 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9069FDEC1D9530F000614C62 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9069FDEB1D9530F000614C62 /* GameScene.m */; };
+		9069FDEF1D95335600614C62 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9069FDEE1D95335600614C62 /* GameViewController.m */; };
+		908CD4931D97E42B00F5568C /* BIZCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CD48F1D97E42B00F5568C /* BIZCircularProgressView.m */; };
+		908CD4941D97E42B00F5568C /* BIZProgressViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CD4921D97E42B00F5568C /* BIZProgressViewHandler.m */; };
+		908CD49A1D97E45E00F5568C /* MonsterFrames.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 908CD4971D97E45E00F5568C /* MonsterFrames.atlasc */; };
+		908CD49B1D97E45E00F5568C /* MonsterFrames.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 908CD4981D97E45E00F5568C /* MonsterFrames.1.png */; };
+		908CD49C1D97E45E00F5568C /* MonsterFrames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 908CD4991D97E45E00F5568C /* MonsterFrames.plist */; };
+		909BE6FB1D99454800404E73 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 909BE6FA1D99454800404E73 /* Score.m */; };
+		90AC0D9C1D9587600083CF76 /* HighscoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AC0D9B1D9587600083CF76 /* HighscoreViewController.m */; };
+		90AC0D9F1D9588110083CF76 /* AddHighscoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AC0D9E1D9588110083CF76 /* AddHighscoreViewController.m */; };
+		90AC0DA11D958A7F0083CF76 /* Screen Shot 2016-09-23 at 18.05.35.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AC0DA01D958A7F0083CF76 /* Screen Shot 2016-09-23 at 18.05.35.png */; };
+		90AC0DA31D958ACE0083CF76 /* Screen Shot 2016-09-23 at 18.07.26.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AC0DA21D958ACE0083CF76 /* Screen Shot 2016-09-23 at 18.07.26.png */; };
+		90AC0DA61D958D460083CF76 /* ViewLeaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AC0DA51D958D460083CF76 /* ViewLeaderBoardViewController.m */; };
+		90AC0DA81D95A36F0083CF76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90AC0DA71D95A36F0083CF76 /* Assets.xcassets */; };
+		90AC0DB11D95A3870083CF76 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AC0DA91D95A3870083CF76 /* iTunesArtwork.png */; };
+		90AC0DB21D95A3870083CF76 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AC0DAA1D95A3870083CF76 /* iTunesArtwork@2x.png */; };
+		90AC0DB31D95A3870083CF76 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AC0DAB1D95A3870083CF76 /* Icon-40.png */; };
+		90AC0DB41D95A3870083CF76 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AC0DAC1D95A3870083CF76 /* Icon-40@2x.png */; };
+		90AC0DB51D95A3870083CF76 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AC0DAD1D95A3870083CF76 /* Icon-60.png */; };
+		90AC0DB61D95A3870083CF76 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AC0DAE1D95A3870083CF76 /* Icon-76.png */; };
+		90AC0DB71D95A3870083CF76 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AC0DAF1D95A3870083CF76 /* Icon-76@2x.png */; };
+		90AC0DB81D95A3870083CF76 /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AC0DB01D95A3870083CF76 /* Icon-83.5@2x.png */; };
+		90AC0DBA1D95B1420083CF76 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AC0DB91D95B1420083CF76 /* GameKit.framework */; };
+		90C528971D999E910085987F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C528961D999E910085987F /* User.m */; };
 		90C766591D952ACA00CEAEC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C766581D952ACA00CEAEC3 /* main.m */; };
 		90C7665C1D952ACA00CEAEC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C7665B1D952ACA00CEAEC3 /* AppDelegate.m */; };
-		90C7665F1D952ACA00CEAEC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C7665E1D952ACA00CEAEC3 /* ViewController.m */; };
+		90C7665F1D952ACA00CEAEC3 /* StartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C7665E1D952ACA00CEAEC3 /* StartScreenViewController.m */; };
 		90C766621D952ACA00CEAEC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C766601D952ACA00CEAEC3 /* Main.storyboard */; };
-		90C766641D952ACA00CEAEC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C766631D952ACA00CEAEC3 /* Assets.xcassets */; };
 		90C766671D952ACA00CEAEC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C766651D952ACA00CEAEC3 /* LaunchScreen.storyboard */; };
+		90C7666F1D952D8000CEAEC3 /* Delegate Pattern SpriteKit UIView.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 90C7666E1D952D8000CEAEC3 /* Delegate Pattern SpriteKit UIView.rtfd */; };
+		90FF20551D95BE2A00992DD0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FF20541D95BE2A00992DD0 /* Security.framework */; };
+		90FF20571D95BE3500992DD0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FF20561D95BE3500992DD0 /* CFNetwork.framework */; };
+		90FF20591D95BE4300992DD0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FF20581D95BE4300992DD0 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9069FDEA1D9530F000614C62 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		9069FDEB1D9530F000614C62 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		9069FDED1D95335600614C62 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		9069FDEE1D95335600614C62 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		908CD48F1D97E42B00F5568C /* BIZCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIZCircularProgressView.m; sourceTree = "<group>"; };
+		908CD4901D97E42B00F5568C /* BIZCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIZCircularProgressView.h; sourceTree = "<group>"; };
+		908CD4911D97E42B00F5568C /* BIZProgressViewHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIZProgressViewHandler.h; sourceTree = "<group>"; };
+		908CD4921D97E42B00F5568C /* BIZProgressViewHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIZProgressViewHandler.m; sourceTree = "<group>"; };
+		908CD4961D97E45E00F5568C /* MonsterAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterAnimation.h; sourceTree = "<group>"; };
+		908CD4971D97E45E00F5568C /* MonsterFrames.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MonsterFrames.atlasc; sourceTree = "<group>"; };
+		908CD4981D97E45E00F5568C /* MonsterFrames.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MonsterFrames.1.png; sourceTree = "<group>"; };
+		908CD4991D97E45E00F5568C /* MonsterFrames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MonsterFrames.plist; sourceTree = "<group>"; };
+		909BE6F91D99454800404E73 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		909BE6FA1D99454800404E73 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		90AC0D9A1D9587600083CF76 /* HighscoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighscoreViewController.h; sourceTree = "<group>"; };
+		90AC0D9B1D9587600083CF76 /* HighscoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighscoreViewController.m; sourceTree = "<group>"; };
+		90AC0D9D1D9588110083CF76 /* AddHighscoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddHighscoreViewController.h; sourceTree = "<group>"; };
+		90AC0D9E1D9588110083CF76 /* AddHighscoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddHighscoreViewController.m; sourceTree = "<group>"; };
+		90AC0DA01D958A7F0083CF76 /* Screen Shot 2016-09-23 at 18.05.35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-23 at 18.05.35.png"; sourceTree = "<group>"; };
+		90AC0DA21D958ACE0083CF76 /* Screen Shot 2016-09-23 at 18.07.26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-23 at 18.07.26.png"; sourceTree = "<group>"; };
+		90AC0DA41D958D460083CF76 /* ViewLeaderBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewLeaderBoardViewController.h; sourceTree = "<group>"; };
+		90AC0DA51D958D460083CF76 /* ViewLeaderBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewLeaderBoardViewController.m; sourceTree = "<group>"; };
+		90AC0DA71D95A36F0083CF76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90AC0DA91D95A3870083CF76 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		90AC0DAA1D95A3870083CF76 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		90AC0DAB1D95A3870083CF76 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		90AC0DAC1D95A3870083CF76 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		90AC0DAD1D95A3870083CF76 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		90AC0DAE1D95A3870083CF76 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		90AC0DAF1D95A3870083CF76 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		90AC0DB01D95A3870083CF76 /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
+		90AC0DB91D95B1420083CF76 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		90C528951D999E910085987F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		90C528961D999E910085987F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		90C528991D999EFA0085987F /* SocialNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialNetwork.h; sourceTree = "<group>"; };
 		90C766541D952ACA00CEAEC3 /* Spritekit-and-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spritekit-and-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C766581D952ACA00CEAEC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90C7665A1D952ACA00CEAEC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90C7665B1D952ACA00CEAEC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		90C7665D1D952ACA00CEAEC3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		90C7665E1D952ACA00CEAEC3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		90C7665D1D952ACA00CEAEC3 /* StartScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartScreenViewController.h; sourceTree = "<group>"; };
+		90C7665E1D952ACA00CEAEC3 /* StartScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartScreenViewController.m; sourceTree = "<group>"; };
 		90C766611D952ACA00CEAEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		90C766631D952ACA00CEAEC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90C766661D952ACA00CEAEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90C766681D952ACA00CEAEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90C7666E1D952D8000CEAEC3 /* Delegate Pattern SpriteKit UIView.rtfd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.rtfd; path = "Delegate Pattern SpriteKit UIView.rtfd"; sourceTree = "<group>"; };
+		90FF20541D95BE2A00992DD0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		90FF20561D95BE3500992DD0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		90FF20581D95BE4300992DD0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,15 +98,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90FF20591D95BE4300992DD0 /* SystemConfiguration.framework in Frameworks */,
+				90FF20571D95BE3500992DD0 /* CFNetwork.framework in Frameworks */,
+				90FF20551D95BE2A00992DD0 /* Security.framework in Frameworks */,
+				90AC0DBA1D95B1420083CF76 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		908CD4951D97E43600F5568C /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				908CD48F1D97E42B00F5568C /* BIZCircularProgressView.m */,
+				908CD4901D97E42B00F5568C /* BIZCircularProgressView.h */,
+				908CD4911D97E42B00F5568C /* BIZProgressViewHandler.h */,
+				908CD4921D97E42B00F5568C /* BIZProgressViewHandler.m */,
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
+		908CD49D1D97E46400F5568C /* ArtWork */ = {
+			isa = PBXGroup;
+			children = (
+				908CD4961D97E45E00F5568C /* MonsterAnimation.h */,
+				908CD4971D97E45E00F5568C /* MonsterFrames.atlasc */,
+				908CD4981D97E45E00F5568C /* MonsterFrames.1.png */,
+				908CD4991D97E45E00F5568C /* MonsterFrames.plist */,
+			);
+			name = ArtWork;
+			sourceTree = "<group>";
+		};
+		90C528981D999E9E0085987F /* LoginToGameKit */ = {
+			isa = PBXGroup;
+			children = (
+				90C528951D999E910085987F /* User.h */,
+				90C528961D999E910085987F /* User.m */,
+				90C528991D999EFA0085987F /* SocialNetwork.h */,
+			);
+			name = LoginToGameKit;
+			sourceTree = "<group>";
+		};
 		90C7664B1D952ACA00CEAEC3 = {
 			isa = PBXGroup;
 			children = (
+				90FF20581D95BE4300992DD0 /* SystemConfiguration.framework */,
+				90FF20561D95BE3500992DD0 /* CFNetwork.framework */,
+				90FF20541D95BE2A00992DD0 /* Security.framework */,
+				90AC0DB91D95B1420083CF76 /* GameKit.framework */,
 				90C766561D952ACA00CEAEC3 /* Spritekit-and-UIKit */,
 				90C766551D952ACA00CEAEC3 /* Products */,
 			);
@@ -58,14 +163,40 @@
 		90C766561D952ACA00CEAEC3 /* Spritekit-and-UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				908CD4951D97E43600F5568C /* Timer */,
+				908CD49D1D97E46400F5568C /* ArtWork */,
 				90C7665A1D952ACA00CEAEC3 /* AppDelegate.h */,
 				90C7665B1D952ACA00CEAEC3 /* AppDelegate.m */,
-				90C7665D1D952ACA00CEAEC3 /* ViewController.h */,
-				90C7665E1D952ACA00CEAEC3 /* ViewController.m */,
+				90C7665E1D952ACA00CEAEC3 /* StartScreenViewController.m */,
+				90C7665D1D952ACA00CEAEC3 /* StartScreenViewController.h */,
+				90AC0D9A1D9587600083CF76 /* HighscoreViewController.h */,
+				90AC0D9B1D9587600083CF76 /* HighscoreViewController.m */,
+				90AC0D9D1D9588110083CF76 /* AddHighscoreViewController.h */,
+				90AC0D9E1D9588110083CF76 /* AddHighscoreViewController.m */,
+				90AC0DA41D958D460083CF76 /* ViewLeaderBoardViewController.h */,
+				90AC0DA51D958D460083CF76 /* ViewLeaderBoardViewController.m */,
+				9069FDED1D95335600614C62 /* GameViewController.h */,
+				9069FDEE1D95335600614C62 /* GameViewController.m */,
+				9069FDEA1D9530F000614C62 /* GameScene.h */,
+				9069FDEB1D9530F000614C62 /* GameScene.m */,
+				909BE6F91D99454800404E73 /* Score.h */,
+				909BE6FA1D99454800404E73 /* Score.m */,
+				90C528981D999E9E0085987F /* LoginToGameKit */,
 				90C766601D952ACA00CEAEC3 /* Main.storyboard */,
-				90C766631D952ACA00CEAEC3 /* Assets.xcassets */,
+				90AC0DA71D95A36F0083CF76 /* Assets.xcassets */,
+				90AC0DA91D95A3870083CF76 /* iTunesArtwork.png */,
+				90AC0DAA1D95A3870083CF76 /* iTunesArtwork@2x.png */,
+				90AC0DAB1D95A3870083CF76 /* Icon-40.png */,
+				90AC0DAC1D95A3870083CF76 /* Icon-40@2x.png */,
+				90AC0DAD1D95A3870083CF76 /* Icon-60.png */,
+				90AC0DAE1D95A3870083CF76 /* Icon-76.png */,
+				90AC0DAF1D95A3870083CF76 /* Icon-76@2x.png */,
+				90AC0DB01D95A3870083CF76 /* Icon-83.5@2x.png */,
 				90C766651D952ACA00CEAEC3 /* LaunchScreen.storyboard */,
 				90C766681D952ACA00CEAEC3 /* Info.plist */,
+				90AC0DA21D958ACE0083CF76 /* Screen Shot 2016-09-23 at 18.07.26.png */,
+				90AC0DA01D958A7F0083CF76 /* Screen Shot 2016-09-23 at 18.05.35.png */,
+				90C7666E1D952D8000CEAEC3 /* Delegate Pattern SpriteKit UIView.rtfd */,
 				90C766571D952ACA00CEAEC3 /* Supporting Files */,
 			);
 			path = "Spritekit-and-UIKit";
@@ -110,6 +241,12 @@
 				TargetAttributes = {
 					90C766531D952ACA00CEAEC3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = L89799FGY5;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -136,9 +273,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C7666F1D952D8000CEAEC3 /* Delegate Pattern SpriteKit UIView.rtfd in Resources */,
+				90AC0DA31D958ACE0083CF76 /* Screen Shot 2016-09-23 at 18.07.26.png in Resources */,
+				90AC0DA11D958A7F0083CF76 /* Screen Shot 2016-09-23 at 18.05.35.png in Resources */,
+				908CD49C1D97E45E00F5568C /* MonsterFrames.plist in Resources */,
+				90AC0DB71D95A3870083CF76 /* Icon-76@2x.png in Resources */,
+				90AC0DB21D95A3870083CF76 /* iTunesArtwork@2x.png in Resources */,
+				90AC0DB81D95A3870083CF76 /* Icon-83.5@2x.png in Resources */,
+				90AC0DB51D95A3870083CF76 /* Icon-60.png in Resources */,
+				90AC0DB61D95A3870083CF76 /* Icon-76.png in Resources */,
+				90AC0DB11D95A3870083CF76 /* iTunesArtwork.png in Resources */,
 				90C766671D952ACA00CEAEC3 /* LaunchScreen.storyboard in Resources */,
-				90C766641D952ACA00CEAEC3 /* Assets.xcassets in Resources */,
+				908CD49A1D97E45E00F5568C /* MonsterFrames.atlasc in Resources */,
+				908CD49B1D97E45E00F5568C /* MonsterFrames.1.png in Resources */,
+				90AC0DA81D95A36F0083CF76 /* Assets.xcassets in Resources */,
 				90C766621D952ACA00CEAEC3 /* Main.storyboard in Resources */,
+				90AC0DB31D95A3870083CF76 /* Icon-40.png in Resources */,
+				90AC0DB41D95A3870083CF76 /* Icon-40@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +300,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C7665F1D952ACA00CEAEC3 /* ViewController.m in Sources */,
+				9069FDEF1D95335600614C62 /* GameViewController.m in Sources */,
+				90C7665F1D952ACA00CEAEC3 /* StartScreenViewController.m in Sources */,
 				90C7665C1D952ACA00CEAEC3 /* AppDelegate.m in Sources */,
+				90AC0D9F1D9588110083CF76 /* AddHighscoreViewController.m in Sources */,
+				909BE6FB1D99454800404E73 /* Score.m in Sources */,
+				90AC0D9C1D9587600083CF76 /* HighscoreViewController.m in Sources */,
+				908CD4941D97E42B00F5568C /* BIZProgressViewHandler.m in Sources */,
+				9069FDEC1D9530F000614C62 /* GameScene.m in Sources */,
+				90C528971D999E910085987F /* User.m in Sources */,
+				90AC0DA61D958D460083CF76 /* ViewLeaderBoardViewController.m in Sources */,
+				908CD4931D97E42B00F5568C /* BIZCircularProgressView.m in Sources */,
 				90C766591D952ACA00CEAEC3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +358,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -243,6 +404,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -265,10 +427,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Spritekit-and-UIKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.KeyboardTest.Spritekit-and-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -276,10 +441,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Spritekit-and-UIKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.KeyboardTest.Spritekit-and-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -302,6 +470,7 @@
 				90C7666D1D952ACA00CEAEC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

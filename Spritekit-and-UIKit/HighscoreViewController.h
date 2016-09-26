@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HighscoreViewController.h
 //  Spritekit-and-UIKit
 //
 //  Created by Natalie Coulam on 23/09/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HighscoreViewController : UIViewController
 
 @end
-

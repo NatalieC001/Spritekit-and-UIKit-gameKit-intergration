@@ -1,0 +1,260 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\fmodern\fcharset0 CourierNewPSMT;\f4\fnil\fcharset0 Menlo-Regular;\f5\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red20\green20\blue21;\red136\green136\blue136;\red16\green16\blue17;
+\red18\green141\blue169;\red19\green20\blue21;\red0\green3\blue255;\red43\green131\blue159;\red17\green128\blue2;
+\red163\green21\blue21;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw12240\paperh15840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl1640\sa500\partightenfactor0
+
+\f0\fs110 \cf2 \expnd0\expndtw0\kerning0
+HowTo: Implement a Delegate Pattern to communicate between a SpriteKit Scene and the parent ViewController\
+\
+****LeaderBoard SpriteKit UIViewController  -\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ri400\sl320\partightenfactor0
+\ls1\ilvl0
+\fs28 \cf3 \kerning1\expnd0\expndtw0 		{\field{\*\fldinst{HYPERLINK "http://developerplayground.net/author/stefanjosten/"}}{\fldrslt \expnd0\expndtw0\kerning0
+STEFANJOSTEN}}
+\f1\fs34 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ri400\sl320\partightenfactor0
+\ls1\ilvl0
+\f0\fs28 \cf3 \kerning1\expnd0\expndtw0 		{\field{\*\fldinst{HYPERLINK "http://developerplayground.net/howto-implement-a-delegate-pattern-to-communicate-between-a-spritekit-scene-and-the-parent-viewcontroller/"}}{\fldrslt \expnd0\expndtw0\kerning0
+12TH JUN '14}}
+\f1\fs34 \cf0 \expnd0\expndtw0\kerning0
+\
+\ls1\ilvl0
+\f0\fs28 \cf3 \kerning1\expnd0\expndtw0 		{\field{\*\fldinst{HYPERLINK "http://developerplayground.net/howto-implement-a-delegate-pattern-to-communicate-between-a-spritekit-scene-and-the-parent-viewcontroller/#comments"}}{\fldrslt \expnd0\expndtw0\kerning0
+0}}
+\f1\fs34 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl400\sa1100\partightenfactor0
+\cf0 \cb4 \
+\pard\pardeftab720\sl800\sa700\partightenfactor0
+
+\f0\fs54 \cf0 \cb1 Welcome to Part 10 of my blog series about game development.\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f1\fs34 \cf0 Today I\'92ll show how to use a delegate pattern to communicate with the ViewController which contains our Scene.\'a0
+\fs20 You can download the\'a0{\field{\*\fldinst{HYPERLINK "https://github.com/stfnjstn/MyFirstGame/releases/tag/v0.7"}}{\fldrslt 
+\f2\b\fs28 \cf5 project from GitHub: v0.7}}
+\fs34 \'a0
+\fs20 if you haven\'92t completed\'a0{\field{\*\fldinst{HYPERLINK "http://developerplayground.net/?p=23"}}{\fldrslt 
+\b\fs34 \cf6 part 8}}.
+\fs34  One of the most important characteristics of this pattern is \'82Inversion of control\'91. The goal of this principle is to remove dependencies between objects. The main idea is that a \'82delegator\'91 object \'82delegates\'91 the execution a task to a \'82delegate object\'91.\'a0You can find multiple definitions and tutorials about the\'a0{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Delegation_pattern"}}{\fldrslt 
+\b \cf6 Delegate Pattern}}. Therefore I\'92ll not explain the pattern itself, but show how you can use it for the following Situation:\
+\pard\pardeftab720\sl800\sa700\partightenfactor0
+
+\f0\fs54 \cf0 \'a0\
+\pard\pardeftab720\sl720\sa700\partightenfactor0
+
+\f1\fs34 \cf6 After creating a new SpriteKit project you typically have a 
+\f3 ViewController
+\f1  which has a reference to a
+\f3 SKScene
+\f1  object:\
+\pard\pardeftab720\sl400\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://developerplayground.net/wp-content/uploads/2014/06/Bildschirmfoto-2014-06-10-um-23.10.57-1.jpg"}}{\fldrslt 
+\b \cf6 {{\NeXTGraphic Bildschirmfoto-2014-06-10-um-23.10.57-1.jpg \width14145 \height4830
+}¬}}}\pard\pardeftab720\sl400\qc\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl400\qc\partightenfactor0
+\cf0 \ul \ulc0 \
+\pard\pardeftab720\sl720\sa700\partightenfactor0
+\cf6 \ulnone The\'a0
+\f3 ViewController\'a0
+\f1 presents the screen and starts the game. This works fine as long as the game lasts. But what can you do, if the game is over?\
+\pard\pardeftab720\sl400\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://developerplayground.net/wp-content/uploads/2014/06/Bildschirmfoto-2014-06-10-um-23.11.09-1.jpg"}}{\fldrslt 
+\b \cf6 {{\NeXTGraphic Bildschirmfoto-2014-06-10-um-23.11.09-1.jpg \width14145 \height6795
+}¬}}}\pard\pardeftab720\sl400\qc\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl400\qj\partightenfactor0
+\cf0 Here comes the Delegate Pattern: 
+\f3 \'a0
+\f1 \'a0\
+\pard\pardeftab720\sl400\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://developerplayground.net/wp-content/uploads/2014/06/Bildschirmfoto-2014-06-10-um-23.11.19-1.jpg"}}{\fldrslt 
+\b \cf6 {{\NeXTGraphic Bildschirmfoto-2014-06-10-um-23.11.19-1.jpg \width13110 \height7785
+}¬}}}\pard\pardeftab720\sl400\qc\partightenfactor0
+\cf0 \
+\'a0\
+\pard\pardeftab720\sl400\partightenfactor0
+\cf0 First of all you have to specify a\'a0
+\f3 protocol
+\f1 \'a0with the methods \'82
+\f3 gameStop
+\f1 \'82 and \'82
+\f3 gameOver
+\f1 \'82 in \'82
+\f3 GameScene.h
+\f1 \'82
+\f3 :
+\f1 \
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f3 \cf0 \'a0
+\f1 \
+\pard\pardeftab720\sl260\partightenfactor0
+
+\f4\fs22 \cf7 @protocol\cf0  GameSceneDelegate <\cf8 NSObject\cf0 >\
+\'a0\
+\cf7 @required\
+\cf0 -(\cf7 void\cf0 ) gameStop;\
+-(\cf7 void\cf0 ) gameOver;\
+\'a0\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f1\fs34 \cf0 \'a0\
+\pard\pardeftab720\sl260\partightenfactor0
+
+\f4\fs22 \cf7 @end\
+\pard\pardeftab720\sl220\partightenfactor0
+
+\f1\fs20 \cf0 The\'a0
+\f3 Scene
+\f1 \'a0object needs a property to store the reference of the\'a0
+\f3 Delegate
+\f4 \'a0
+\f1 in \'82
+\f3 GameScene.h
+\f1 \'82:
+\fs22 \cf8 \
+\pard\pardeftab720\sl260\partightenfactor0
+
+\f4 \cf8 \'a0\
+\pard\pardeftab720\sl720\sa700\partightenfactor0
+\cf7 @property\cf6 \'a0(\cf7 nonatomic\cf6 ,\cf7 strong\cf6 )\'a0\'a0\cf7 id\cf6 <\cf8 GameSceneDelegate\cf6 > delegateContainerViewController;
+\f1\fs34  The\'a0
+\f3 ViewController
+\f1 \'a0which will act as\'a0
+\f3 Delegate
+\f1 \'a0has to implement the protocol:\
+\pard\pardeftab720\sl260\partightenfactor0
+
+\f4\fs22 \cf7 @interface\cf0  GameViewController : \cf8 UIViewController\cf0  <\cf8 GameSceneDelegate\cf0 >\cf8 \
+\cf0 \'a0\cf8 \
+\pard\pardeftab720\sl260\partightenfactor0
+
+\f5\fs20 \cf0 set the 
+\f3 delegateContainerViewController\'a0
+\f5 property for the Scene:
+\f1\fs22 \cf8 \
+\pard\pardeftab720\sl260\partightenfactor0
+
+\f4 \cf8 \'a0\
+\cf0 -(\cf7 void\cf0 )viewWillAppear:(\cf7 BOOL\cf0 )animated\{\
+\'a0 \'a0 \'85\
+\'a0 \'a0 \cf9 // Present the scene.\
+\cf0 \'a0 \'a0 [skView \cf8 presentScene\cf0 :gameScene];\
+\'a0 \'a0 gameScene.\cf8 delegateContainerViewController\cf0 =\cf7 self\cf0 ;\cf8 \
+\'a0\
+\cf0 \}\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f1 \cf8 \'a0\
+\pard\pardeftab720\sl260\partightenfactor0
+
+\f4 \cf0 \'a0\cf8 \
+\pard\pardeftab720\sl720\sa700\partightenfactor0
+
+\f1\fs34 \cf6 GameScene and GameViewController have to call/react on the protocol methods
+\f3 :
+\f1 \
+\pard\pardeftab720\sl400\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://developerplayground.net/wp-content/uploads/2014/06/Bildschirmfoto-2014-06-10-um-23.11.27-1.jpg"}}{\fldrslt 
+\b \cf6 {{\NeXTGraphic Bildschirmfoto-2014-06-10-um-23.11.27-1.jpg \width13260 \height10545
+}¬}}}\pard\pardeftab720\sl400\qc\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl400\qj\partightenfactor0
+\cf0 Add this method to 
+\f3 GameScene.m
+\f1 \'a0to notify the GameViewController with \'82
+\f3 gameStop
+\f1 \'82 and \'82
+\f3 gameOver
+\f1 \'82:\
+\pard\pardeftab720\sl260\partightenfactor0
+
+\f4\fs22 \cf9 // React on Alert\
+\pard\pardeftab720\sl260\partightenfactor0
+\cf0 \'96 (\cf7 void\cf0 )alertView:(\cf8 UIAlertView\cf0  *)alertView clickedButtonAtIndex:(\cf8 NSInteger\cf0 )buttonIndex\
+\{\
+\'a0 \'a0 \cf7 if\cf0  (alertView.\cf8 tag\cf0 ==1) \{\
+\'a0 \'a0 \'a0 \'a0 \cf7 if\cf0  (buttonIndex==1) \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \cf9 // Notify Delegate\
+\cf0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 [\cf7 self\cf0 .\cf8 delegateContainerViewController gameStop\cf0 ];\cf8 \
+\cf0 \'a0 \'a0 \'a0 \'a0 \}\
+\'a0 \'a0 \} \cf7 else\cf0  \cf7 if\cf0  (alertView.\cf8 tag\cf0 ==2) \{\
+\'a0 \'a0 \'a0 \'a0 \cf9 // Notify Delegate\
+\cf0 \'a0 \'a0 \'a0 \'a0 [\cf7 self\cf0 .\cf8 delegateContainerViewController gameOver\cf0 ];\cf8 \
+\cf0 \'a0 \'a0 \}\
+\}\
+\pard\pardeftab720\sl800\sa700\qj\partightenfactor0
+
+\f0\fs20 \cf0 \'a0
+\fs54 \
+
+\fs20 The GameViewController has to react on \'82
+\f3 gameStop
+\f0 \'82 and \'82
+\f3 gameOver
+\f0 \'82. For example by navigating to another ViewController
+\f3 . 
+\f0 Add this two methods to\'a0
+\f3 GameViewController.m
+\f0 :
+\fs54 \
+\pard\pardeftab720\sl260\partightenfactor0
+
+\f4\fs22 \cf0 -(\cf7 void\cf0 ) gameStop \{\
+\'a0 \'a0 [\cf7 self\cf8  performSegueWithIdentifier\cf0 : \cf10 @\'93BackToStart\'93\cf8  sender\cf0 : \cf7 self\cf0 ];\cf8 \
+\cf0 \}\
+-(\cf7 void\cf0 ) gameOver \{\
+\'a0 \'a0 [\cf7 self\cf8  performSegueWithIdentifier\cf0 : \cf10 @\'93AddHighScore\'93\cf8  sender\cf0 : \cf7 self\cf0 ];\cf8 \
+\cf0 \}\
+\pard\pardeftab720\sl220\partightenfactor0
+
+\f3\fs20 \cf0 \'a0
+\f1\fs34 \
+\pard\pardeftab720\sl800\sa700\qj\partightenfactor0
+
+\f3\fs20 \cf0 \'82performSegueWithIdentifier\'91
+\f0  navigates to another ViewController as specified in the iPhone and iPad storyboards. The only missing thing is to name the segues in the storyboards with 
+\f3 \'82BackToStart\'91 
+\f0 and 
+\f3 \'82AddHighScore\'91
+\f0 :
+\fs54 \
+\pard\pardeftab720\sl220\partightenfactor0
+
+\f3\fs20 \cf0 \'a0
+\f1\fs34 \
+\pard\pardeftab720\sl400\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://developerplayground.net/wp-content/uploads/2014/06/Bildschirmfoto-2014-06-12-um-23.38.33-1.jpg"}}{\fldrslt 
+\b \cf6 {{\NeXTGraphic Bildschirmfoto-2014-06-12-um-23.38.33-1.jpg \width16110 \height4410
+}¬}}}\pard\pardeftab720\sl400\qc\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl220\partightenfactor0
+
+\f3\fs20 \cf0 \'a0
+\f1\fs34 \
+\pard\pardeftab720\sl400\qc\partightenfactor0
+\cf0 \'a0\
+\'a0\
+\'a0\
+\'a0\
+\'a0\
+\pard\pardeftab720\sl720\sa700\partightenfactor0
+\cf6 As\'a0always\'a0you can download the complete{\field{\*\fldinst{HYPERLINK "https://github.com/stfnjstn/MyFirstGame/releases/tag/v0.8"}}{\fldrslt 
+\b \'a0project from GitHub: v0.8}} That\'92s all for today. In my next post I\'92ll try something with {\field{\*\fldinst{HYPERLINK "https://itunes.apple.com/us/book/swift-programming-language/id881256329?mt=11"}}{\fldrslt 
+\b SWIFT}}.\
+\pard\pardeftab720\sl400\qc\partightenfactor0
+\cf0 \ul \
+\pard\pardeftab720\sl720\sa700\partightenfactor0
+\cf6 \ulnone Cheers, \uc0\u8232 Stefan\
+}
